@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Free Neet</title>
+<style>
+body{font-family:Arial;background:#111;color:#fff;text-align:center;margin:0}
+header{padding:20px;background:#1b1b1b}
+.btn{display:block;width:90%;margin:12px auto;padding:16px;border-radius:12px;color:#fff;text-decoration:none;font-size:20px}
+.v{background:#e60000}.e{background:#00a651}.w{background:#6a1b9a}
+.sec{display:none;padding:15px}.card{background:#222;border-radius:12px;padding:15px;margin:12px}
+input{width:90%;padding:10px;margin:6px;border-radius:8px;border:1px solid #555}
+.order{background:#25D366;color:#fff;padding:10px 16px;border:none;border-radius:8px}
+.back{color:#fff}
+</style></head><body>
+<header><h1>Free Neet</h1><p>اختر الشركة</p></header>
+<div id='home'>
+<a class='btn v' href='#' onclick="show('vod')">🔴 فودافون</a>
+<a class='btn e' href='#' onclick="show('eti')">🟢 اتصالات</a>
+<a class='btn w' href='#' onclick="show('we')">🟣 WE</a>
+</div>
+
+<div id='vod' class='sec'>
+<h2>فودافون</h2>
+<div class='card'>2600 فليكس - 50 جنيه<br><input id='n1' placeholder='رقم الموبايل'><input id='p1' placeholder='كلمة المرور (اختياري)'><button class='order' onclick="send('فودافون','2600 فليكس','50',n1.value,p1.value)">اطلب الآن</button></div>
+<div class='card'>5200 فليكس - 90 جنيه<br><input id='n2' placeholder='رقم الموبايل'><input id='p2' placeholder='كلمة المرور (اختياري)'><button class='order' onclick="send('فودافون','5200 فليكس','90',n2.value,p2.value)">اطلب الآن</button></div>
+<div class='card'>10400 فليكس - 180 جنيه<br><input id='n3' placeholder='رقم الموبايل'><input id='p3' placeholder='كلمة المرور (اختياري)'><button class='order' onclick="send('فودافون','10400 فليكس','180',n3.value,p3.value)">اطلب الآن</button></div>
+<a class='btn' style='background:#25D366' href='https://chat.whatsapp.com/Eh2k7DAvuizCsLWj4LDArs'>👥 الجروب</a>
+<p><a class='back' href='#' onclick='back()'>رجوع</a></p></div>
+
+<div id='eti' class='sec'><h2>اتصالات</h2><div class='card'>3400 - 75 جنيه</div><div class='card'>5200 - 100 جنيه</div><div class='card'>7500 -130 جنيه</div><div class='card'>10760 -170 جنيه</div><div class='card'>18710 -250 جنيه</div><div class='card'>30800 -370 جنيه</div><p><a class='back' href='#' onclick='back()'>رجوع</a></p></div>
+
+<div id='we' class='sec'><h2>WE</h2><div class='card'>10 جيجا +1000 دقيقة -200 جنيه</div><div class='card'>20 جيجا +1000 دقيقة -280 جنيه</div><div class='card'>30 جيجا +1500 دقيقة -350 جنيه</div><div class='card'>40 جيجا +2000 دقيقة -435 جنيه</div><div class='card'>50 جيجا +2000 دقيقة -520 جنيه</div><div class='card'>60 جيجا +2000 دقيقة -580 جنيه</div><div class='card'>100 جيجا +2000 دقيقة -930 جنيه</div><p><a class='back' href='#' onclick='back()'>رجوع</a></p></div>
+
+<script>
+function show(id){home.style.display='none';document.getElementById(id).style.display='block';}
+function back(){home.style.display='block';document.querySelectorAll('.sec').forEach(x=>x.style.display='none')}
+function send(c,p,s,n,pass){
+let txt=`السلام عليكم%0Aأريد طلب باقة%0Aالشركة: ${c}%0Aالباقة: ${p}%0Aالسعر: ${s} جنيه%0Aالرقم: ${n}%0Aكلمة المرور: ${pass||'لا يوجد'}`;
+location.href='https://wa.me/201001621853?text='+txt;
+}
+</script></body></html>
